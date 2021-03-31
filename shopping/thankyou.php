@@ -39,7 +39,7 @@
         <a class="nav-link" href="#">Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
+        <a class="nav-link" href="#">Catagories</a>
       </li>
     </ul>
 		    <div id="google_translate_element"></div>
@@ -55,7 +55,7 @@ session_start();
 //echo $_SESSION['TID'];
 //echo '<br/>';
 //echo '<pre>';
-$product_id=$_SESSION['product_id'];
+
 $id=$_REQUEST['payment_id'];
 /*
 $status=$_REQUEST['payment_status'];
@@ -73,11 +73,8 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER,
-            array("X-Api-Key:test_5f065af946a18464a3b3552f2ba",
-                  "X-Auth-Token:test_cf7dc45312b26c71ce0d15ee522"));
-/*curl_setopt($ch, CURLOPT_HTTPHEADER,
             array("X-Api-Key:test_dbb3888227460d6140843f66398",
-                  "X-Auth-Token:test_6db535639e5589183b3a569dfb2"));*/
+                  "X-Auth-Token:test_6db535639e5589183b3a569dfb2"));
 
 $response = curl_exec($ch);
 $response=json_decode($response);
@@ -95,18 +92,11 @@ $email=$details->{'email'};
 $buyer_name=$details->{'buyer_name'};
 $amount=$details->{'amount'};
 $product=$details->{'purpose'};
-$userid=$_SESSION['userid'];
-$address=$_SESSION['address'];
-$country=$_SESSION['country'];
-$state=$_SESSION['state'];
-$district=$_SESSION['district'];
 //echo $j->{'id'} ;
 //$n= $response;
 // echo $n;
 $msg="";
-$sql="INSERT INTO buyerdetails (bid,product_id,name,phone,email,product,amount,success,userid,country,state,district,address) VALUES ('$bid','$product_id','$buyer_name','$phone','$email','$product','$amount','$success','$userid','$country','$state','$district','$address')";
-//echo $sql;
-$sql1="UPDATE `product` SET `qauntity`=(SELECT `qauntity` FROM `product` WHERE id='$product_id')-1 WHERE id='$product_id'";
+$sql="INSERT INTO buyerdetails (bid,name,phone,email,product,amount,success) VALUES ('$bid','$buyer_name','$phone','$email','$product','$amount','$success')";
 
 if(mysqli_query($conn,$sql))
 		{
