@@ -8,9 +8,9 @@ if (!isset($_SESSION['email'])) {
 require 'config.php';
 $msg="";
 $email=$_SESSION['email'];
-$name=$_SESSION['name'];
+$name1=$_SESSION['name'];
 	# code...
-echo $email;
+//echo $email;
 	$sql1 = "SELECT `fid` FROM `farmerdetails` WHERE `email`='$email'";
 	$result1=mysqli_query($conn,$sql1);
 	$row1=mysqli_fetch_array($result1);
@@ -32,8 +32,8 @@ if(isset($_POST['submit']))
 	$error = $_FILES['file']['error'];
 	$userid=$row1['fid'];
 	$sql="INSERT INTO product (topcategory,subcategory,product_name,brandname,weightvolume,costprice,product_price,EAN,qauntity,product_image,userid) VALUES ('$p_topcategory','$p_subcategory','$p_name','$p_brandname','$p_weightvolume','$p_costprice','$p_price','$p_EANcode','$p_quantity','$name','$userid')";
-	echo $sql;
-	if (isset ($name)) {
+//	echo $sql;
+	if (isset ($name1)) {
     	if (!empty($name)) {
 
     	$location = 'Images/';
@@ -54,10 +54,16 @@ if(isset($_POST['submit']))
 		else
 		{
 			$b= "Failed";
+			echo "<script type='text/javascript'>"; 
+      echo "alert('Failed!')"; 
+      echo "</script>"; 
 		}
 		if($a=='Uploaded' && $b=='Added to Database')
 		{
-			$msg="Product sucessfully added!";
+			$msg="Product successfully added!";
+			echo "<script type='text/javascript'>"; 
+      echo "alert('Product successfully added!!')"; 
+      echo "</script>"; 
 		}
 }
 
@@ -69,7 +75,7 @@ if(isset($_POST['submit']))
 	<meta name="author" content='Ayusha bhola'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 	<title>Add product information</title>
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -85,36 +91,42 @@ if(isset($_POST['submit']))
 
 </head>
 <body >
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Product Details</a>
+	<nav class="navbar navbar-dark bg-success">
 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  <!-- Brand -->
+  <a class="navbar-brand mr-auto" href="#"><h4><b>Product Details</b></h4></a>
+  
+  <!-- Toggler/collapsibe Button -->
+  <a class="navbar-brand" href="#"><b><h5>Welcome <?=$name1;?></h5></b></a>
+<div id="google_translate_element"></div>
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto" >
-    	<li class="nav-item">
-        <a class="nav-link" href="#"><b><h5><?=$name;?></h5></b></a>
+      
+      <li class="nav-item">
+        <a class="nav-link"href="farmerdashboard.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="displayproducts.php">My Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="displayfarmerdetails.php">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="add.php">Add Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="displayorder.php">Order recevied</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Emarket</a>
-      </li>
-      li class="nav-item">
         <a class="nav-link" href="logout.php">Logout</a>
       </li>
     </ul>
-    <div id="google_translate_element"></div>
+    
   </div>
 </nav>
 	<div class="container">
@@ -150,7 +162,7 @@ if(isset($_POST['submit']))
 						<input type="text" name="brandname" class="form-control" placeholder="Brand name" required="">
 					</div>
 <div class="form-group">
-						<input type="text" name="weightvolume" class="form-control" placeholder="weight /volume   g/ml" required="">
+						<input type="text" name="weightvolume" class="form-control" placeholder="weight /volume   kg/l" required="">
 					</div>
 
 <div class="form-group">
@@ -172,10 +184,31 @@ if(isset($_POST['submit']))
 					</div>	
 
 						<div class="custom-file">
-								<input type="file" id="file" name="file" class="custom-file-input" required >
-								<label for="customFile" class="custom-file-label" placeholder="Choose Product Image" >select image</label>
+							
+								<!--<input type="file" id="profile-img" name="file"   class="custom-file-input" required >
+								
+								<label for="customFile" id="profile-img" class="custom-file-label" placeholder="Choose Product Image" >select image</label>-->
 							    
 								
+								<input type="file" name="file" id="profile-img">
+								<img src="" id="profile-img-tag" width="50px" />
+
+
+								<script type="text/javascript">
+								    function readURL(input) {
+								        if (input.files && input.files[0]) {
+								            var reader = new FileReader();
+								            
+								            reader.onload = function (e) {
+								                $('#profile-img-tag').attr('src', e.target.result);
+								            }
+								            reader.readAsDataURL(input.files[0]);
+								        }
+								    }
+								    $("#profile-img").change(function(){
+								        readURL(this);
+								    });
+								</script>
 						</div>
 					</div>
 					
@@ -190,7 +223,7 @@ if(isset($_POST['submit']))
 				</form>
 				<div class="row justify-content-center">
 					<div class="col-md-6 mt-3 p-4 bg-light rounded">
-						<a href="index.php" class="btn btn-warning btn-block btn-lg"> Go to product page</a>
+						<a href="displayproducts.php" class="btn btn-warning btn-block btn-lg"> Go to product page</a>
 					</div>
 					
 				</div>
@@ -227,6 +260,6 @@ function googleTranslateElementInit() {
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-
+<?php include "./template/footer.php"; ?>
 </body>
 </html>
