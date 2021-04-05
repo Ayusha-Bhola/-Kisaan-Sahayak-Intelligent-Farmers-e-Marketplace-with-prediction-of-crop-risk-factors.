@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,17 +35,9 @@
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto" >
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Catagories</a>
-      </li>
-    </ul>
+      
 	    <div id="google_translate_element"></div>
+	</ul>
   </div>
 </nav>
 <?php
@@ -55,6 +49,7 @@ $result=mysqli_query($conn,$sql);
 	<div class="row">
 	<?php
 	while ($row=mysqli_fetch_array($result)) {
+		$_SESSION['userid']=$row['userid'];
        	?>
 	<div class="col-lg-4 mt-3 mb-3">
 		<div class="card-deck">
@@ -78,6 +73,7 @@ function googleTranslateElementInit() {
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<?php include "./template/footer.php"; ?>
 
 </body>
 </html>

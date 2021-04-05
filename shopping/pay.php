@@ -4,8 +4,16 @@ $price=$_POST['product_price'];
 $name=$_POST['name'];
 $phone=$_POST['phone'];
 $email=$_POST['email'];
-session_start();
+$country=$_POST['country'];
+$state=$_POST['state'];
+$district=$_POST['district'];
+$address=$_POST['address'];
 
+session_start();
+$_SESSION['country']=$country;
+$_SESSION['state']=$state;
+$_SESSION['district']=$district;
+$_SESSION['address']=$address;
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://test.instamojo.com/api/1.1/payment-requests/');
@@ -13,8 +21,11 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER,
-            array("X-Api-Key:test_dbb3888227460d6140843f66398",
-                  "X-Auth-Token:test_6db535639e5589183b3a569dfb2"));
+            array("X-Api-Key:test_5f065af946a18464a3b3552f2ba",
+                  "X-Auth-Token:test_cf7dc45312b26c71ce0d15ee522"));
+//curl_setopt($ch, CURLOPT_HTTPHEADER,
+           // array("X-Api-Key:test_dbb3888227460d6140843f66398",
+                  //"X-Auth-Token:test_6db535639e5589183b3a569dfb2")
 $payload = Array(
     'purpose' => $product_name,
     'amount' => $price,
