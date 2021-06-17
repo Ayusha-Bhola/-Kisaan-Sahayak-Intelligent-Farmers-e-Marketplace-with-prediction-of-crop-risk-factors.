@@ -8,13 +8,17 @@ Leaf disease detection is the most useful feature for farmers as they worried ab
 
 
 Dataset source:
-Links[visit website]
-(https://drive.google.com/drive/folders/1vdr9CC9ChYVW2iXp6PlfyMOGD-4Um1ue)
+[visit website](https://drive.google.com/drive/folders/1vdr9CC9ChYVW2iXp6PlfyMOGD-4Um1ue)
 
 
+---
 # Dependencies-and-Requirements:
 
  Libraries used:
+ Use 'for' loop 
+ '''javascript var name 
+ 
+ 
  
  flask 1.1.2:
  
@@ -24,6 +28,7 @@ License: BSD-3-Clause
 numpy 1.18.5:
 
 A fundamental package for array computing in python
+
 License: OSI Approved (BSD)
 
 scikit-learn 0.22.1:
@@ -47,11 +52,62 @@ PHP 3.01:
 
 PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
 PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.
-Licence:2.0
+License:2.0
 
 MySQL:
 
 MySQL is an open-source relational database management system.
-Licence:MySQL 8.0
+License:MySQL 8.0
 
+
+
+
+
+
+
+
+
+
+
+---
+
+## Tools
+1.IDE: Used Jupyter NoteBook (Google Colab) for model training. used spyder for model deployment on the local system. To use Jupyter NoteBook and Spyder.
+
+2.Testing: 
+
+3.Analysis:
+
+
+
+### System Environment :
+
+Processor: 2.5 gigahertz (GHz) or faster processor.
+
+RAM: 8 GB or more
+
+Hard drive space: 48 GB for 64-bit OS or Higher
+
+
+Operating System:Higher Windows 10
+
+
+GPU: NVIDIA GTX 1050(4 GB) Compute Capability 3.5 or higher.
+
+
+Language: Python 3.6.
+
+
+Tool: Anaconda 3-5.2.0-Linux. Anaconda3-5.2.0-Windows-x86_64. Xampp v3.2.4
+
+
+Internet Connection: Internet connectivity is necessary to download some Libraries. Internet connection required during the training of the ML model.
+
+
+---
+
+# Intructions for Deployment
+
+
+Step 1: Download and install Python 3.6.
 
