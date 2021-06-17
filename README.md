@@ -11,7 +11,8 @@ Dataset source:
 https://drive.google.com/drive/folders/1vdr9CC9ChYVW2iXp6PlfyMOGD-4Um1ue
 
 
-#Dependencies and Requirements
+#Dependencies and Requirements:
+
  Libraries used:
  flask 1.1.2:
 Flask is a lightweight WGSI(Web Server Gateway Interface) web application framework. It began as a simple wrapper around werkzeug and jinja and has become one of the most popular Python web application frameworks
