@@ -15,14 +15,13 @@ Dataset source:
 # Dependencies-and-Requirements:
 
  Libraries used:
- Use 'for' loop 
- '''javascript var name 
- 
  
  
  flask 1.1.2:
  
 Flask is a lightweight WGSI(Web Server Gateway Interface) web application framework. It began as a simple wrapper around werkzeug and jinja and has become one of the most popular Python web application frameworks
+
+
 License: BSD-3-Clause
 
 numpy 1.18.5:
@@ -34,17 +33,23 @@ License: OSI Approved (BSD)
 scikit-learn 0.22.1:
 
 Scikit-learn is a free software machine learning library for python programming.
+
+
 License: BSD 3-Clause
 
 keras 2.4.3:
 
 Keras is an API designed for human beings, not machines. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear & actionable error messages. It also has extensive documentation and developer guides.
+
+
 License: MIT
 
 
 TensorFlow 2.1.0:
 
 TensorFlow is an open-source machine learning framework for everyone.
+
+
 License: Apache 2.0
 
 
@@ -52,11 +57,15 @@ PHP 3.01:
 
 PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
 PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.
+
+
 License:2.0
 
 MySQL:
 
 MySQL is an open-source relational database management system.
+
+
 License:MySQL 8.0
 
 
