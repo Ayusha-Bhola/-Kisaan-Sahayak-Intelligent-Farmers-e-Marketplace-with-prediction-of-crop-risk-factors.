@@ -122,3 +122,23 @@ Internet Connection: Internet connectivity is necessary to download some Librari
 
 Step 1: Download and install Python 3.6.
 
+Step 2: Download and install Spyder.
+
+Step 3: Install above packages using below command in anaconda prompt
+        pip install tensorflow==2.1.0
+        pip install Keras==2.4.3
+        pip install numpy==1.18.5
+        pip install flask==1.1.2
+
+![1](https://user-images.githubusercontent.com/62464857/122721112-e5a5c480-d28d-11eb-823d-8d4e9fe9d826.png)
+
+
+
+
+
+
+
+
+
+
+
