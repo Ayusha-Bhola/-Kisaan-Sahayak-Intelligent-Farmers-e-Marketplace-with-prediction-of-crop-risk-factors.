@@ -129,6 +129,8 @@ Step 3: Install above packages using below command in anaconda prompt
         pip install Keras==2.4.3
         pip install numpy==1.18.5
         pip install flask==1.1.2
+        
+Step 4: Open Spyder and create a new project then create folders and files according to below hierarchy of the project.
 
 ![1](https://user-images.githubusercontent.com/62464857/122721112-e5a5c480-d28d-11eb-823d-8d4e9fe9d826.png)
 
