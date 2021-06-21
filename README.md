@@ -1,4 +1,4 @@
-# Kisaan-Sahayak-Intelligent-Farmers-E-Marketplace
+# Kisaan-Sahayak-Intelligent-Farmers-E-Marketplace-with-Prediction-of-Crop-Risk-Factor
 
 India is a huge Agricultural Hub and more than 50% of the Indian workforce is involved in agriculture. Thus, considering this a proposed system named “Kisaan Sahayak” : Intelligent Farmers e-Marketplace with prediction of crop risk factors.
 It is a smart approach which implements the following features.
