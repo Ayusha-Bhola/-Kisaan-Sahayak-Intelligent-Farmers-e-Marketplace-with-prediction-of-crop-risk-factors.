@@ -1,0 +1,73 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri may 14 16:37:22 2021
+
+@author: bhola ayusha
+"""
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>COTTON PLANT DISEASE PREDICTION</title>
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+                    
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(153, 156, 150); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+
+                    <h5>
+
+                        There is no disease on the cotton Plant.</br></br>
+                        कपास के पेड़ पर कोई बीमारी नहीं है। </br></br>
+                        कपाशीच्या झाडावर कोणताही रोग नाही आहे. </br></br>
+                        કપાસના ઝાડ ઉપર કોઈ રોગ નથી.</br></br>
+                        ಹತ್ತಿ ಮರದ ಮೇಲೆ ಯಾವುದೇ ರೋಗವಿಲ್ಲ..</br></br>
+                        పత్తి చెట్టుపై వ్యాధి లేదు..</br></br>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
