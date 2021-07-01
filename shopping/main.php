@@ -1,7 +1,5 @@
 <?php
 	// $_COOKIE['googtrans'];
-	  session_start();
-
 	  
 	  $con = mysqli_connect("localhost","root","","shopping");
 	  // Check connection
@@ -49,10 +47,8 @@
 	
 	   if(isset($_POST['submit']))
 	   {
-	   	$_SESSION['phone']=$_POST['phone_no'];
 	  	 if(!empty($_POST['phone_no']))
 	  	 {
-
 	  		 $phone_no = $_POST['phone_no'];
 	  		 echo $phone_no;
 	  		 echo$_POST['phone_no'];
@@ -60,44 +56,30 @@
 	  		 //echo $query;
 	  		 
 	  		 $rw = mysqli_fetch_row($query);
-	  		 
+	  		 echo "   --";
 	  		 $idold = $rw[0];
+	  		 echo " ---";
 	  		 $numrows = mysqli_num_rows($query);
 	  		 echo $numrows;
-
-	  		 
-
-				
-					if ($numrows==1)
-					{
-						$_SESSION['phone1']=$phone_no;
-						$url="farmerdashboard.php";
-						header('Location:'.$url);
-						exit();
-					}
-			
-
-	  
-	  		 
 	  		 //echo ("---------------");
-	  		 else if ($numrows == 0)
+	  		 if ($numrows == 0)
 	  		 {
 	  			 
-	  			// $sql = "INSERT INTO farmerdetails (phone) VALUES('$phone_no')";
+	  			 $sql = "INSERT INTO farmerdetails (phone) VALUES('$phone_no')";
 	  			
-	  			// $result = mysqli_query($con);
-	  			 //$id = mysqli_insert_id($con);
-	  			 //echo($id);
-	  			 //if ($result)
-	  			 //{
+	  			 $result = mysqli_query($con,$sql);
+	  			 $id = mysqli_insert_id($con);
+	  			 echo($id);
+	  			 if ($result)
+	  			 {
 	  				 //session_start();
 	  				 //$_COOKIE['flag'] = False;
 	  				 //$_COOKIE['id']=$id;
-				 //setcookie("id","$id",time()+432000);
+				 setcookie("id","$id",time()+432000);
 	  				 //$_COOKIE['sess_user']=$phone_no;
-				 //setcookie("sess_user","$phone_no",time()+432000);
-	  				header("Location:register.php");
-	  			 
+				 setcookie("sess_user","$phone_no",time()+432000);
+	  				 header("Location:register.php");
+	  			 }
 	  		 }
 	  		 else
 	  		 {	

@@ -34,11 +34,11 @@
         <div class="container">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobiri.se">
+                    <a href="">
                         <img src="assets/images/bannertop-121x127.jpg" alt="Mobirise" style="height: 3.8rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="https://mobiri.se">Kisaan Sahayak<br>Intelligent Farmers E-market Place with Crop Risk factors</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="">Kisaan Sahayak<br>Intelligent Farmers E-market Place with Crop Risk factors</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
@@ -51,8 +51,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black display-4" href="#">&nbsp;</a></li></ul>
                 
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4" href="home.php" target="_blank">Home</a> <a class="btn btn-success display-4" href="phone.php">Login</a> 
-                <a class="btn btn-success display-4" href="index.php">E-market</a> 
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4" href="./home.php" target="_blank">Home</a> <a class="btn btn-success display-4" href="./phone.php">Login</a> 
+                <a class="btn btn-success display-4" href="./index1.php">E-market</a> 
             </div>
         </div>
     </nav>
@@ -82,8 +82,16 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="title col-12 col-md-9">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Work with Content</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Click on the image to replace it. To change parameters of a block, click on <em>the blue gear icon</em>. You can set a background type and its content. Click on the Buttons parameter to enable buttons for this block. Click in the text to change your text style or color. Select text to change its formatting or add links.</h4>
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Idea of Project</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">	
+India is a huge Agricultural Hub and more than 50% of the Indian workforce is involved in agriculture. Thus, considering this a proposed system named “Kisaan Sahayak” : Intelligent Farmers e-Marketplace with prediction of crop risk factors.
+	It is a smart approach which implements the following features.
+
+
+It provides an E-Marketing platform which will reduce the role of middlemen who are hindering the trading sector in agriculture. This E-Marketing platform is free of cost and can be accessed from anywhere and made available in understandable language to farmers using php.
+It also provides a Leaf Disease Detection system which detects the disease of crop and give solution for it.
+
+.</h4>
                 
             </div>
         </div>
@@ -100,7 +108,7 @@
             
         </div>
         <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-24 col-md-12 col-lg-6">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="assets/images/mbr-696x466.jpg" alt="" title="">
@@ -113,7 +121,7 @@
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-24 col-md-12 col-lg-6">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="assets/images/plant-disease-562x722.jpg" alt="" title="">
@@ -126,19 +134,7 @@
                     
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/crop-yield.webp" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        
-                        <h6 class="item-subtitle mbr-fonts-style mt-1 display-5">Crop yield prediction</h6>
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Predicting Crop Yield throughout the year,also assists in predicting the yield of various crops in various seasons.</p>
-                    </div>
-                    
-                </div>
-            </div>
+            
 
         </div>
     </div>
@@ -147,15 +143,22 @@
 <section class="slider1 cid-sqKBfO3iq0" id="slider1-q">
     
     <div class="carousel slide" id="sqT37qDoxm" data-interval="5000">
+        
         <ol class="carousel-indicators">
             <li data-slide-to="0" class="active" data-target="#sqT37qDoxm"></li>
             <li data-slide-to="1" data-target="#sqT37qDoxm"></li>
             <li data-slide-to="2" data-target="#sqT37qDoxm"></li>
+            <li data-slide-to="3" data-target="#sqT37qDoxm"></li>
+            <li data-slide-to="4" data-target="#sqT37qDoxm"></li>
+            <li data-slide-to="5" data-target="#sqT37qDoxm"></li>
+            <li data-slide-to="6" data-target="#sqT37qDoxm"></li>
+           
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item slider-image item active">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background3.jpg">
+                    <img class="d-block w-100" src="assets/images/pic1.png">
+
                     
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
@@ -167,7 +170,7 @@
             </div>
             <div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background5.jpg">
+                    <img class="d-block w-100" src="assets/images/pic2.png">
                     
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
@@ -179,7 +182,7 @@
             </div>
             <div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="d-block w-100" src="assets/images/background8.jpg">
+                    <img class="d-block w-100" src="assets/images/pic5.png">
                     
                     <div class="carousel-caption">
                         <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
@@ -189,7 +192,54 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="carousel-item slider-image item">
+                <div class="item-wrapper">
+                    <img class="d-block w-100" src="assets/images/pic6.jpeg">
+                    
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-3">
+                            <strong>Full-Width Slider</strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">Click on the image to edit slides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slider-image item">
+                <div class="item-wrapper">
+                    <img class="d-block w-100" src="assets/images/pic9.jpeg">
+                    
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-3">
+                            <strong>Full-Width Slider</strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">Click on the image to edit slides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slider-image item">
+                <div class="item-wrapper">
+                    <img class="d-block w-100" src="assets/images/pic10.jpeg">
+                    
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-3">
+                            <strong>Full-Width Slider</strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">Click on the image to edit slides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slider-image item">
+                <div class="item-wrapper">
+                    <img class="d-block w-100" src="assets/images/pic7.jpeg">
+                    
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-3">
+                            <strong>Full-Width Slider</strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">Click on the image to edit slides.</p>
+                    </div>
+                </div>
+            </div>
         <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#sqT37qDoxm">
             <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -216,7 +266,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="assets/images/team1.jpg">
+                        <img src="assets/images/ayusha.jpg">
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong>Ayusha </strong><br><strong>Bhola</strong></h5>
@@ -224,12 +274,12 @@
                         
                         <div class="social-row display-7">
                             <div class="soc-item">
-                                <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                <a href="https://github.com/Ayusha-Bhola" target="_blank">
                                     <span class="mbr-iconfont mbrib-github"></span>
                                 </a>
                             </div>
                             <div class="soc-item">
-                                <a href="https://twitter.com/mobirise" target="_blank">
+                                <a href="https://www.linkedin.com/in/ayusha-bhola-288aa3179/" target="_blank">
                                     <span class="mbr-iconfont socicon-logmein socicon"></span>
                                 </a>
                             </div>
@@ -249,7 +299,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="assets/images/team2.jpg">
+                        <img src="assets/images/shruti.jpg" style='height:340px;'>
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
@@ -258,12 +308,12 @@
                         
                         <div class="social-row display-7">
                             <div class="soc-item">
-                                <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                <a href="https://github.com/Shrutika-C" target="_blank">
                                     <span class="mbr-iconfont mbrib-github"></span>
                                 </a>
                             </div>
                             <div class="soc-item">
-                                <a href="https://twitter.com/mobirise" target="_blank">
+                                <a href="https://in.linkedin.com/in/shrutika-chendake-06432a1ba" target="_blank">
                                     <span class="mbr-iconfont socicon-logmein socicon"></span>
                                 </a>
                             </div>
@@ -283,7 +333,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="assets/images/team3.jpg">
+                        <img src="assets/images/megha.jpg" style='height:340px;' >
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong>Megha</strong><br><strong> Karjol</strong></h5>
@@ -291,12 +341,12 @@
                         
                         <div class="social-row display-7">
                             <div class="soc-item">
-                                <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                <a href="https://github.com/MeghaKarjol" target="_blank">
                                     <span class="mbr-iconfont mbrib-github"></span>
                                 </a>
                             </div>
                             <div class="soc-item">
-                                <a href="https://twitter.com/mobirise" target="_blank">
+                                <a href="https://in.linkedin.com/in/megha-karjol-6b58b21b4" target="_blank">
                                     <span class="mbr-iconfont socicon-logmein socicon"></span>
                                 </a>
                             </div>
@@ -316,7 +366,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="assets/images/team4.jpg">
+                        <img src="assets/images/akshu.jpg" style='height:340px;'>
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong>Akshata Machal</strong></h5>
@@ -324,12 +374,12 @@
                         
                         <div class="social-row display-7">
                             <div class="soc-item">
-                                <a href="https://www.facebook.com/Mobirise/" target="_blank">
+                                <a href="https://github.com/Akshata-M" target="_blank">
                                     <span class="mbr-iconfont mbrib-github"></span>
                                 </a>
                             </div>
                             <div class="soc-item">
-                                <a href="https://twitter.com/mobirise" target="_blank">
+                                <a href="https://in.linkedin.com/in/akshata-machal-236aa6179" target="_blank">
                                     <span class="mbr-iconfont socicon-logmein socicon"></span>
                                 </a>
                             </div>
@@ -384,19 +434,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="card col-12 col-md-6">
-                <div class="card-wrapper">
-                    <div class="image-wrapper">
-                        <a href="tel:+919175488222"><span class="mbr-iconfont mobi-mbri-phone mobi-mbri"></span></a>
-                    </div>
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
-                            <strong>Phone</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            <a href="tel:+919175488222" class="text-primary">0 (800) 123 45 67</a>
-                        </p>
-                    </div>
-                </div>
+                
                 <div class="card-wrapper">
                     <div class="image-wrapper">
                         <a href="mailto:bholaayusha123@gmail.com"><span class="mbr-iconfont socicon-mail socicon"></span></a>
@@ -406,7 +444,7 @@
                             <strong>Email</strong>
                         </h6>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            <a href="mailto:bholaayusha123@gmail.com" class="text-primary">info@site.com</a>
+                            <a href="mailto:kisaansahayak@gmail.com" class="text-primary">info@site.com</a>
                         </p>
                     </div>
                 </div>
@@ -426,9 +464,12 @@
         <div class="row mbr-white">
             <div class="col-6 col-lg-3">
                 <div class="media-wrap col-md-8 col-12">
-                    <a href="https://mobiri.se/">
+                    <a href="">
                         <img src="assets/images/bannertop-219x230.jpg" alt="Mobirise">
                     </a>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Kisaan Sahayak</strong>
+                </h5>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
@@ -436,53 +477,53 @@
                     <strong>About</strong>
                 </h5>
                 <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                    Mobirise is a free offline app for
-                    Windows and Mac to easily create small/medium websites, landing pages, online resumes and
-                    portfolios.</p>
+                    Kisaan Sahayak is a web application build for betterment of Farmer's Life.It provides Complete Ecosystem which include Intelligent Farmer E-marketplace with Crop risk factors </p>
                 <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
                     <strong>Follow Us</strong>
                 </h5>
                 <div class="social-row display-7">
                     <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://twitter.com" target="_blank">
                             <span class="mbr-iconfont socicon socicon-facebook"></span>
                         </a>
                     </div>
                     <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://twitter.com" target="_blank">
                             <span class="mbr-iconfont socicon socicon-twitter"></span>
                         </a>
                     </div>
                     <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="https://twitter.com" target="_blank">
                             <span class="mbr-iconfont socicon socicon-instagram"></span>
                         </a>
                     </div>
                     
                 </div>
             </div>
+            
             <div class="col-12 col-md-6 col-lg-3">
                 <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>Mobirise Help</strong>
+                    <strong>Contact</strong>
                 </h5>
                 <ul class="list mbr-fonts-style display-4">
-                    <li class="mbr-text item-wrap">Help Center</li>
-                    <li class="mbr-text item-wrap">Mobirise Forums</li>
-                    <li class="mbr-text item-wrap">Mobirise Kit</li>
-                    <li class="mbr-text item-wrap">Our site</li>
+                    <ul>
+                            <li>Address: Solapur,Maharashtra</li>
+                            <li>Email: kisaansahayak@gmail.com</li>
+                        </ul>
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>Mobirise Extensions</strong>
+                    
                 </h5>
-                <ul class="list mbr-fonts-style display-4">
-                    <li class="mbr-text item-wrap">Code Editor</li>
-                    <li class="mbr-text item-wrap">Form Builder</li>
-                    <li class="mbr-text item-wrap">Popup Builder</li>
-                    <li class="mbr-text item-wrap">Enterprise</li>
-                </ul>
-            </div>
+            <h6>Contact us</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="kisaansahayak@gmail.com
+">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                    </div>
             
         </div>
     </div>

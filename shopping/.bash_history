@@ -133,3 +133,29 @@ cd /c/xampp/htdocs/portal
 git clone https://github.com/Elysian01/Agrocraft-An-E-Commerce-Website-For-Fresh-Farm-Produce-Vegetables-And-Fruits.git
 cd /c/xampp/htdocs/img
 git clone https://github.com/Rizwan17/Ecommerce.git
+cd ..
+cd..
+cd ..
+cd ..
+cd xampp
+cd htdocs
+cd farmer_help_portal1
+git add -A
+cd shopping
+git add -A
+git commit -m "commit"
+git push origin master
+git remote add origin  https://github.com/Ayusha-Bhola/Farmer_help_portal.git
+git remote -v
+git push origin master
+git push origin main
+cd ..
+cd ..
+cd farmer_help_portal
+cd shopping
+git add -A
+git commit -m "commit"
+git remote add origin  https://github.com/Ayusha-Bhola/Farmer_help_portal.git
+git remote -v
+git push origin master
+git clone https://github.com/spMohanty/PlantVillage-Dataset

@@ -1,19 +1,12 @@
 <?php
-$product_name=$_POST['product_name'];
-$price=$_POST['product_price'];
-$name=$_POST['name'];
-$phone=$_POST['phone'];
-$email=$_POST['email'];
-$country=$_POST['country'];
-$state=$_POST['state'];
-$district=$_POST['district'];
-$address=$_POST['address'];
+
 
 session_start();
-$_SESSION['country']=$country;
-$_SESSION['state']=$state;
-$_SESSION['district']=$district;
-$_SESSION['address']=$address;
+$name=$_SESSION['name'];
+$email=$_SESSION['email'];
+$phone=$_SESSION['phone'];
+$price=$_SESSION['total'];
+$product_name="Buying";
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://test.instamojo.com/api/1.1/payment-requests/');

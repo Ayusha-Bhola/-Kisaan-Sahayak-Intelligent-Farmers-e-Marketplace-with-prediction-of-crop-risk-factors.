@@ -1,61 +1,11 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="author" content='Ayusha bhola'>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<title>Thankyou For Purchasing</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body class="bg-info">
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Shopping</a>
-
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
-      </li>
-    </ul>
-		    <div id="google_translate_element"></div>
-
-  </div>
-</nav>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-8">
-				<h1 class="text-center">Thank You For Purchasing!!</h1>
-				<?php
+<?php
 session_start();
+$name=$_SESSION['name'];
+$email=$_SESSION['email'];
 //echo $_SESSION['TID'];
 //echo '<br/>';
 //echo '<pre>';
-$product_id=$_SESSION['product_id'];
+//$product_id=$_SESSION['product_id'];
 $id=$_REQUEST['payment_id'];
 /*
 $status=$_REQUEST['payment_status'];
@@ -93,20 +43,41 @@ $bid=$details->{'id'};
 $phone=$details->{'phone'};
 $email=$details->{'email'};
 $buyer_name=$details->{'buyer_name'};
-$amount=$details->{'amount'};
-$product=$details->{'purpose'};
-$userid=$_SESSION['userid'];
-$address=$_SESSION['address'];
-$country=$_SESSION['country'];
-$state=$_SESSION['state'];
-$district=$_SESSION['district'];
+$total=$_SESSION['total'];
 //echo $j->{'id'} ;
 //$n= $response;
 // echo $n;
-$msg="";
-$sql="INSERT INTO buyerdetails (bid,product_id,name,phone,email,product,amount,success,userid,country,state,district,address) VALUES ('$bid','$product_id','$buyer_name','$phone','$email','$product','$amount','$success','$userid','$country','$state','$district','$address')";
+$sql1 = "SELECT * FROM `mycart`";
+
+$result1=mysqli_query($conn,$sql1);
+				
+ while ($row1=mysqli_fetch_array($result1)) {
+ 	//print_r($row1);
+ 	$bid=$details->{'id'};
+
+ 	$product_id=$row1['product_id'];
+ 	$name=$row1['name'];
+ 	$email=$row1['email'];
+ 	$phone=$row1['phone'];
+ 	$product=$row1['product'];
+ 	$amount=$row1['amount'];
+ 	$success=1;
+ 	$userid=$row1['userid'];
+ 	$country=$row1['country'];
+ 	$state=$row1['state'];
+ 	$district=$row1['district'];
+ 	$address=$row1['address'];
+ 	$quantity=$row1['quantity'];
+ 	$msg="";
+$sql="INSERT INTO buyerdetails (bid,product_id,name,phone,email,product,amount,success,userid,country,state,district,address,quantity) VALUES ('$bid','$product_id','$name','$phone','$email','$product','$amount','$success','$userid','$country','$state','$district','$address','$quantity')";
 //echo $sql;
-$sql1="UPDATE `product` SET `qauntity`=(SELECT `qauntity` FROM `product` WHERE id='$product_id')-1 WHERE id='$product_id'";
+$sql1="UPDATE `product` SET `qauntity`=(SELECT `qauntity` FROM `product` WHERE id='$product_id')-".$quantity." WHERE id='$product_id'";
+if ($conn->query($sql1) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
 
 if(mysqli_query($conn,$sql))
 		{
@@ -120,52 +91,14 @@ if(mysqli_query($conn,$sql))
 		{
 			$msg= "Sucessful Payment!";
 		}
+
+
+ 	}
+mysqli_query($conn,'TRUNCATE TABLE mycart');
+
+
+
 curl_close($ch); 
+header('Location: temp.php?name='.$name.'&email='.$email);
 
 ?>
-                <h2><?=$msg;?></h2>
-				<h3>Payment Details</h3>
-
-		<table class="table table-bordered">
-			<tr>
-				<th>Payment ID:</th>
-				<td><?=$bid?></td>
-			</tr>
-			<tr>
-				<th>Buyer Name:</th>
-				<td><?=$buyer_name?></td>
-			</tr>
-			<tr>
-				<th>Product Name:</th>
-				<td><?=$product?></td>
-			</tr>
-			<tr>
-				<th>Amount:</th>
-				<td><?=$amount?></td>
-			</tr>
-			<tr>
-				<th>Phone Number:</th>
-				<td><?=$phone?></td>
-			</tr>
-			<tr>
-				<th>Email:</th>
-				<td><?=$email?></td>
-			</tr>
-			<tr>
-				<th>Payment Success:</th>
-				<td><?=$success?></td>
-			</tr>
-			
-		</table>
-			</div>
-		</div>
-	</div>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>

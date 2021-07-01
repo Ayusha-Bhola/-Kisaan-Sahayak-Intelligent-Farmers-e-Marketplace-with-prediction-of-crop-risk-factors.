@@ -1,88 +1,108 @@
 <?php
 session_start();
-
 require 'config.php';
-//print_r($_SESSION['list_id']);
-$name=$_GET['name'];
-$email=$_GET['email'];
-$total_price=$_GET['total'];
-$_SESSION['total']=$total_price;
+$msg="";
+/*if (!isset($_SESSION['phone'])) {
+	# code...
+	header("Location:phone.php");
+	exit();
+}
+*/
+//if (isset($_GET['id'])) {
+	# code...
+$phones= $_SESSION['phone'];
 if(isset($_POST['submit']))
 {
-	$name=$_POST['name'];
-	$_SESSION['name']=$name;
-	$email=$_POST['email'];
-	$_SESSION['email']=$email;
-	$phone=$_POST['phone'];
-	$_SESSION['phone']=$phone;
-	$country=$_POST['country'];
-	$state=$_POST['state'];
-	$district=$_POST['district'];
-	$address=$_POST['address'];
-
-$total_price=0;
-//echo $userid;
-if (isset($_SESSION['list_id'])) {
-	# code...
-	$i=0;
+	$phone=$_SESSION['phone'];
+	//echo $phone;
+	$email = ($_POST["Femail"]);
+	//$Mob=$_POST['phone'];	
+	//$t1=preg_match('/^[0-9]{10}+$/', $Mob);
+	$t2=filter_var($email, FILTER_VALIDATE_EMAIL);
+	if (!$t2 ) 
+	{
+		
+		if(!$t2)
+			echo '<script>alert("Invalid email format")</script>'; 
+		
+		
+	  
+	}
+	else
+	{
 	
-
-	foreach ($_SESSION['list_id'] as $product_id) {
-		# code...
-		$j="q".$i;
-		//echo $j;
-			$q=$_GET[$j];
-			//echo $q;
-			$id=$product_id;
-			//echo $id;
-	
-	
-	$sql="SELECT * FROM product WHERE id='$id'";
-	$result=mysqli_query($conn,$sql);
-	$row=mysqli_fetch_array($result);
-	$pname=$row['product_name'];
-	$price=$row['product_price'];
-	$pprice=$row['product_price']*$q;
-	$userid=$row['userid'];
-	$total_price+=$pprice;
-	$pimage=$row['product_image'];
-	$sql1="INSERT INTO `mycart`(`product_id`, `name`, `phone`, `email`, `product`, `amount`, `userid`, `country`, `state`, `district`, `address`,`quantity`) VALUES ('$id','$name','$phone','$email','$pname','$price','$userid','$country','$state','$district','$address','$q')";
-	//echo $sql1;
-if(mysqli_query($conn,$sql1))
+			$Fname=$_POST['FName'];
+			$Company=$_POST['Cname'];
+			$Email=$_POST['Femail'];
+			//$Mob=$_POST['phone'];
+			$Country=$_POST['country'];
+			$State=$_POST['state'];
+			$District=$_POST['district'];
+			$Address=$_POST['address'];
+			$sqlE="select * from farmerdetails where email='$Email'";
+			//$sqlP="select * from farmerdetails where phone='$Mob'";
+			//echo $sqlE;
+			//echo $sqlP;
+			$duplicate_email=mysqli_query($conn,$sqlE);
+			//$duplicate_phone=mysqli_query($conn,$sqlP);
+		//echo mysqli_num_rows($duplicate_email);
+		if (mysqli_num_rows($duplicate_email)>0)
 		{
-			header('Location: pay.php');
-
+		echo '<script>alert("User Email id already exists.")</script>';
 		}
-		else
-		{
-			echo "<script>";
-			echo "alert('Failed')";
-			echo "</script>";
-		}
-//if(mysqli_query($conn,$sql))
-	//echo $pname;
-	//$_SESSION['userid']=$userid;
-	//$_SESSION['product_id']=$row['id'];
-	$i+=1;
-}
+		else{
+			
 
-}
-else
-{
-	echo "<script>";
-			echo "alert('No Product Found')";
-			echo "</script>";
-}
-}
+				try {
+					$sql="INSERT INTO farmerdetails (fname, cname, email,phone, country, state, district, address) VALUES  ('$Fname','$Company','$Email','$phones','$Country','$State','$District','$Address')";
+					//echo $sql;
+					if(mysqli_query($conn,$sql))
+						{
+							$b="Added to Database";
+						}
+						else
+						{
+							$b= "Failed";
+						}
+						if( $b=='Added to Database')
+						{
+							$msg="Details sucessfully added!";
+							echo "<script type='text/javascript'>alert('$msg');</script>";
+
+						}
+				}
+				catch(PDOException $e)
+				{
+				  echo $sql . "
+				  " . $e->getMessage();
+				}
+
+		}	
+			
+		$conn = null;	
+		}
+		$_SESSION['email']=$Email;
+		$_SESSION['name']=$Fname;
+//$url="add.php";
+//header('Location:'.$url);
+//exit();
+	}
+
+//}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
+	
 	<meta name="author" content='Ayusha bhola'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<title>Add product information</title>
+
+	<title>Farmer's information</title>
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -94,30 +114,77 @@ else
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+body {
+  overflow-y: scroll; /* Show vertical scrollbar */
+  overflow-x: scroll; /* Show horizontal scrollbar */
+}
+</style>
 </head>
-<body>
-                            <div id="google_translate_element"></div>
+
+
+
+
+<body  >
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Farmer Details</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item">
+        <a class="nav-link" href="">Home</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="add.php">Add Product</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="dashboard.php">My Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">E-market</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+    </ul>
+
+    <div id="google_translate_element"></div>
+  </div>
+</nav>
 
 <div class="container">
-	<div class="row justify-content-center">
-		<div class="col-md-10 mb-5">
-			<h2 class="text-center p-2 text-primary">Fill the details to complete your order </h2>
-			
-		<h4>Enter your details:</h4>
-		<form action="" method='POST' accept-charset="utf-8">
-			<input type="hidden" name="product_name" value="<?=$pname;?>">
+		
+			<div class="col-md-6 bg-light mt-5 rounded">
+				<h2 class="text-center p-2">Farmer information </h2>
+				
+				<form action="" method="POST" name="form1"class="p-2" enctype="multipart/form-data" id="form-box" >
+				<div class="form-group"><label class="checkbox-inline"><input type="checkbox" value=""> Farmer</label></div>
 
-			<input type="hidden" name="product_price" value="<?=$total_price;?>">
+					<div class="form-group">
+						<input type="text " name="FName" class="form-control" placeholder="Farmer Name" required>
+					</div>
+					<div class="form-group">
+						<input type="text" name="Cname" class="form-control" placeholder="Company Name" required>
+					</div>
+					<div class="form-group">
+						<input type="email " name="Femail" class="form-control" placeholder="Email  example:sophie@example.com" required >
+					</div>
+					<!--
+					<div class="form-group">
+					<input type="tel"  name="phone"  class="form-control" placeholder="Mobile Number" required=>
+					</div>-->
 			<div class="form-group">
-				<input type="text" name="name" class="form-control" value="<?=$name?>"   required>
-				</div>
-			<div class="form-group">
-				<input type="email" name="email" class="form-control" value="<?=$email?>"  required>
-				</div>
-			<div class="form-group">
-				<input type="tel" name="phone" class="form-control" placeholder="Enter your phone" required>
-				</div>
-				<div class="form-group">
 		    <select class="form-control" id="inputCountry" name="country" required>
                         <option value="SelectState">Select Country</option>
                         <option value="India">India</option>
@@ -179,40 +246,37 @@ else
 				
 
 
-			
-			<div class="form-group">
-				
-				<input type="submit" name="submit" class="btn btn-danger btn-lg" value="Click to pay : Rs.<?=number_format($total_price);?>">
-				
-			</div>
-		</form>
-	</div>
-	</div>
+					
+					<div class="form-group">
+						<input type="submit" name="submit" class="btn btn-danger btn-block"value="Submit" >
+					</div>
+					<div class="form-group">
+						<h4 class="text-center"><?=$msg;?></h4>
+					</div>
+				</form>
+				</div>
 </div>
+<script src="email-validation.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $("#translateButton").click(function () {
 
-            var url = "https://translation.googleapis.com/language/translate/v2";
-            //Strings requiring translation
-            url += "?q=" + escape($("#textField").text());
-            url += "&q=" + escape($("#title").text());
-            //Target language
-            url += "&target=" + $("#targetLanguage").val();
-            //Replace with your API key
-            url += "&key=YOUR_API_KEY";
-            $.get(url, function (data, status) {
-                //Results are returned in an array following the order they were passed. 
-                $("#textField").text(data.data.translations[0].translatedText);
-                $("#title").text(data.data.translations[1].translatedText);
-            });       
-        });
-    </script>  
+
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
 var AndraPradesh = ["Anantapur","Chittoor","East Godavari","Guntur","Kadapa","Krishna","Kurnool","Prakasam","Nellore","Srikakulam","Visakhapatnam","Vizianagaram","West Godavari"];
 var ArunachalPradesh = ["Anjaw","Changlang","Dibang Valley","East Kameng","East Siang","Kra Daadi","Kurung Kumey","Lohit","Longding","Lower Dibang Valley","Lower Subansiri","Namsai","Papum Pare","Siang","Tawang","Tirap","Upper Siang","Upper Subansiri","West Kameng","West Siang","Itanagar"];
@@ -379,6 +443,5 @@ $("#inputState").change(function(){
 
 </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
