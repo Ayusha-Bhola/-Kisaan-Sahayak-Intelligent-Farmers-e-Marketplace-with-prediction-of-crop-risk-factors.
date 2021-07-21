@@ -137,6 +137,25 @@ Step 4: Open Spyder and create a new project then create folders and files accor
 
 ![1](https://user-images.githubusercontent.com/62464857/122721112-e5a5c480-d28d-11eb-823d-8d4e9fe9d826.png)
 
+Step 5: Create a virtual environment and activate virtualenv.
+
+Step 6: Open directory where requirement.txt file is located and run “pip install -r requirements.txt”.
+It will install all the required packages for the project.
+
+Step 7:Enable the curl library if it is not enabled by using the following steps:
+1. Open php.ini file, it is usually located in the server’s root folder
+2. Search the ;extension=php_curl.dll and remove the semicolon ‘;’ before it to enable.
+3. Save and close the file. Restart server.
+
+Step 8: Copy Leafdisease folder to xampp/htdocs folder and import file to the MySQL
+database.
+
+Step 9:  Run app.py to start flask server.
+
+Step 10: : Start XAMPP server and Go to the browser and type localhost://Leafdisease
+
+
+
 
 
 
