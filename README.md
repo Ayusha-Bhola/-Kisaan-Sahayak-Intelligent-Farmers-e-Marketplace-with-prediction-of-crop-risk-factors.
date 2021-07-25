@@ -153,7 +153,7 @@ database.
 
 Step 9:  Run app.py to start flask server.
 
-Step 10: : Start XAMPP server and Go to the browser and type localhost://Leafdisease
+Step 10: : Start XAMPP server and Go to the browser and type localhost5050://Leafdisease
 
 
 
