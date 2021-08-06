@@ -122,6 +122,26 @@ Internet Connection: Internet connectivity is necessary to download some Librari
 ---
 
 # Intructions for Deployment
+For E-marketplace portal for farmers
+Step 1: Download/clone the repository .
+
+Step 2: Download and install xampp 8.0.9 / PHP 8.0.9 .
+
+Step 3: Activate xampp,start apache and MYSQL.
+
+Step 4: Now click on the "Admin" button corresponding to the MySQL module. This automatically redirects the user to a web browser to the following address-
+
+http://localhost/phpmyadmin
+
+Step 5: Create Database in MYSQL with name "shopping".
+
+Step 6: Import "shopping.sql" file 
+
+Step 7: Copy shopping folder to xampp/htdocs folder.
+
+Step 8: Start XAMPP server and Go to the browser and type localhost://shopping//home.php
+
+For Plant disease detection system
 
 
 Step 1: Download and install Python 3.6.
