@@ -123,6 +123,7 @@ Internet Connection: Internet connectivity is necessary to download some Librari
 
 # Intructions for Deployment
 For E-marketplace portal for farmers
+
 Step 1: Download/clone the repository .
 
 Step 2: Download and install xampp 8.0.9 / PHP 8.0.9 .
@@ -148,32 +149,30 @@ Step 1: Download and install Python 3.6.
 
 Step 2: Download and install Spyder.
 
-Step 3: Install above packages using below command in anaconda prompt
-        pip install tensorflow==2.1.0
-        pip install Keras==2.4.3
-        pip install numpy==1.18.5
-        pip install flask==1.1.2
+Step 3: Create a virtual environment and activate virtual.
         
 Step 4: Open Spyder and create a new project then create folders and files according to below hierarchy of the project.
 
 ![1](https://user-images.githubusercontent.com/62464857/122721112-e5a5c480-d28d-11eb-823d-8d4e9fe9d826.png)
 
-Step 5: Create a virtual environment and activate virtualenv.
+Step 5: Create a virtual environment and activate virtual.
 
-Step 6: Open directory where requirement.txt file is located and run “pip install -r requirements.txt”.
-It will install all the required packages for the project.
-
-Step 7:Enable the curl library if it is not enabled by using the following steps:
-1. Open php.ini file, it is usually located in the server’s root folder
-2. Search the ;extension=php_curl.dll and remove the semicolon ‘;’ before it to enable.
-3. Save and close the file. Restart server.
-
-Step 8: Copy Leafdisease folder to xampp/htdocs folder and import file to the MySQL
-database.
+Step 6: Install above packages using below command in anaconda prompt
+pip install tensorflow==2.2.0
+pip install Keras==2.4.3
+pip install numpy==1.18.5
+pip install flask==1.1.2
+pip install pillow
+pip install --upgrade IPython
 
 Step 9:  Run app.py to start flask server.
 
-Step 10: : Start XAMPP server and Go to the browser and type localhost5050://Leafdisease
+Step 10: : Start XAMPP server and Go to the browser and paste the url http://127.0.0.1:5000/
+
+![Capture](https://user-images.githubusercontent.com/54286037/128539603-4c9ce8ac-5bc5-4233-8226-2f4412d6c0b0.PNG)
+![Capture1](https://user-images.githubusercontent.com/54286037/128539641-46338ecb-785e-4b29-a0d9-dcf996d99b1d.PNG)
+
+
 
 
 
