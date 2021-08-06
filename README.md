@@ -158,12 +158,19 @@ Step 4: Open Spyder and create a new project then create folders and files accor
 Step 5: Create a virtual environment and activate virtual.
 
 Step 6: Install above packages using below command in anaconda prompt
+
 pip install tensorflow==2.2.0
+
 pip install Keras==2.4.3
+
 pip install numpy==1.18.5
+
 pip install flask==1.1.2
+
 pip install pillow
+
 pip install --upgrade IPython
+
 
 Step 9:  Run app.py to start flask server.
 
