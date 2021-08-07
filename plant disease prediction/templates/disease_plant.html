@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri may 14 16:37:22 2021
 
-@author: bhola ayusha
-"""
 <!doctype html>
 <html lang="en">
 
@@ -16,7 +11,7 @@ Created on Fri may 14 16:37:22 2021
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
-    <title>COTTON PLANT DISEASE PREDICTION</title>
+    <title> PLANT DISEASE PREDICTION</title>
 
     <style>
         * {
@@ -37,7 +32,7 @@ Created on Fri may 14 16:37:22 2021
             /* font-size: 1rem; */
         }
 
-        @media (max-width: 430px) and (min-width: 200px) {
+        @media (max-width: 600px) and (min-width: 200px) {
 
 
             .contents {
@@ -52,8 +47,8 @@ Created on Fri may 14 16:37:22 2021
         }
 
         .border img {
-            border-radius: 15px;
-            border: 2px solid black;
+            border-radius: 10px;
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -64,64 +59,66 @@ Created on Fri may 14 16:37:22 2021
 
 
 
-
+<div id="google_translate_element"></div>
+	
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'},
+				'google_translate_element'
+			);
+		}
+	</script>
+	
+	<script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+	</script>
+	
     <div class="container my-2">
         <div class="row mb-5">
-
+			<div class="col-sm" style="margin-bottom: 23px;" >
+			<h3>Plant disease Prediction predicts wheather plant is:<br>
+				1:Healthy Cotton plant <br>
+				2:Diseased Cotton plant <br>
+				3:Sun-burn Cotton plant<br>
+				output :-<br></h3>
+			</div>
             <div class="col-sm" style="margin-bottom: 23px;">
-                <span class="border border-primary">
                     <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
                     <!-- <img src="{{pred_output}}" alt="User Image" class="img-thumbnail"> -->
 
 
-                </span>
+                
             </div>
 
             <div class="col-sm">
 
                 <div>
-                    <h1 style="padding: 15px; background-color: rgb(153, 156, 150); color: white;"
-                        class="text-center mb-5 content-h1 rounded">
+                    <h1 style="padding: 15px; background-color:red; color:black;"
+                        class="text-center mb-5 content-h1">
                         {{pred_output}} </h1>
                 </div>
 
-                <h2>Disease Name / रोग का नाम / रोगाचे नाव / રોગ નામ / ರೋಗದ ಹೆಸರು / వ్యాధి పేరు : </span></h2>
-                <h3 style="line-height: 100%;">Attack of Leaf Sucking and Chewing Pests <br> चुरडा,मावा रोग <br> લીફ
-                    ચૂસીને જીવાતો જીવાતોનો હુમલો <br> ಎಲೆ
-                    ಹೀರುವ
-                    ಮತ್ತು ಚೂಯಿಂಗ್ ಕೀಟಗಳ ದಾಳಿ <br> ఆకు పీల్చటం మరియు చూయింగ్ తెగుళ్ళ దాడి</h3>
+                
+                
                 <hr class="w-100 mx-auto ">
             </div>
         </div>
 
 
-        <h1> Solution for Disease / रोग का उपचार / रोगाचा उपाय / રોગનો ઉપાય / ರೋಗಕ್ಕೆ ಪರಿಹಾರ / వ్యాధికి పరిష్కారం: </h1>
+        <h1> Solution for Disease : </h1>
         <p><strong>Use any one Systemic Insecticide, which contain<i> Flonicamid 50%/ Thiamethoxam 25% WG / Imidacloprid
                     17.8 Sl / Acetamiprid 20% SP.</i></strong></p>
         <p></p>
-        <p>किसी भी एक प्रणालीगत कीटनाशक का प्रयोग करें, जिसमें फ्लोनिकमिड ५०% / थियामेथोक्साम 25% WG / इमिडाक्लोप्रिड
-            १७.८
-            एसएल / एसिटामिप्रिड २०% एसपी है।</p>
-        <p>कोणत्याही एक सिस्टीमिक कीटकनाशकाचा वापर करा, ज्यात फ्लोनीकायमिड ५०% / थियॅमेथॉक्सम 25% WG / इमिडाक्लोप्रिड
-            १७.८
-            एसएल / एसीटामिप्रिड २०% एसपी असेल.</p>
-        <p>કોઈપણ એક પ્રણાલીગત જંતુનાશક દવાઓનો ઉપયોગ કરો, જેમાં ફ્લોનીકેમિડ 50% / થાઇઆમેથોક્સમ 25% WG / ઇમિડાકલોપ્રિડ
-            17.8
-            એસએલ / એસેટામિપ્રિડ 20% એસપી હોય છે.</p>
-        <p>ಫ್ಲೋನಿಕಾಮಿಡ್ 50% / ಥಿಯಾಮೆಥೊಕ್ಸಮ್ 25% WG / ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 ಎಸ್ಎಲ್ / ಅಸೆಟಾಮಿಪ್ರಿಡ್ 20% ಎಸ್ಪಿ ಹೊಂದಿರುವ
-            ಯಾವುದೇ
-            ಒಂದು ವ್ಯವಸ್ಥಿತ ಕೀಟನಾಶಕವನ್ನು ಬಳಸಿ.</p>
-        <p>ఫ్లోనికామిడ్ 50% / థియామెథోక్సామ్ 25% WG / ఇమిడాక్లోప్రిడ్ 17.8 స్లా / ఎసిటామిప్రిడ్ 20% ఎస్పిని కలిగి ఉన్న
-            ఏదైనా
-            ఒక దైహిక పురుగుమందును వాడండి.</p>
-    </div>
+         </div>
 
 
 
     <section>
 
         <div class="container">
-            <h1 style="padding: 15px; background-color: rgb(153, 156, 150); color: white;"
+            <h1 style="padding: 15px; background-color: black; color: white;"
                 class="text-center my-3 content-h1">
                 Recommended Products</h1>
         </div>
@@ -132,37 +129,37 @@ Created on Fri may 14 16:37:22 2021
             <div class="card-columns">
                 <div class="card ">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/preet.png" alt="">
+                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/preet.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/ulala.png" alt="">
+                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/ulala.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 25-40 gm/Acre</h3>
                     </div>
                 </div>
                 <div class="card ">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px" class="img-fluid" src="/static/images/victor.png" alt="">
+                        <img style="border-radius: 10px" class="img-fluid" src="/static/images/victor.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
                     </div>
                 </div>
                 <div class="card ">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/confidor.png" alt="">
+                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/confidor.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 25-35 ml/Acre</h3>
                     </div>
                 </div>
                 <div class="card ">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/panama.png" alt="">
+                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/panama.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
                     </div>
                 </div>
                 <div class="card ">
                     <div class="card-body text-center card-style">
-                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/actara.png" alt="">
+                        <img style="border-radius: 10px;" class="img-fluid" src="/static/images/actara.png" style="width:110px;height:110px;"  alt="">
                         <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
                     </div>
                 </div>

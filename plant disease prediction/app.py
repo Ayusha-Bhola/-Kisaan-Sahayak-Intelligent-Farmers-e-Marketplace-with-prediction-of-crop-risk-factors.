@@ -3,7 +3,8 @@
 Created on Fri feb 14 16:37:22 2021
 
 @author: bhola ayusha
-"""#Import necessary libraries
+"""
+#Import necessary libraries
 from flask import Flask, render_template, request
 
 import numpy as np
@@ -66,7 +67,7 @@ def predict():
 
         print("@@ Predicting class......")
         pred, output_page = pred_cot_dieas(cott_plant=file_path)
-              
+        
         return render_template(output_page, pred_output = pred, user_image = file_path)
     
 # For local system & cloud

@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun may 14 16:37:22 2021
 
-@author: bhola ayusha
-"""
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +32,7 @@ Created on Sun may 14 16:37:22 2021
             height: 85vh;
             justify-content: center;
             align-items: center;
-            margin-top: 50px;
+            margin-top: 20px;
             width: 60%;
             text-align: center;
             margin: auto;
@@ -47,7 +42,7 @@ Created on Sun may 14 16:37:22 2021
         .details h2 {
             
             position: relative;
-            top: 100px;
+            top: 20px;
             margin: auto;
             color: rgb(18, 231, 231);
             font-size: 3rem;
@@ -60,7 +55,7 @@ Created on Sun may 14 16:37:22 2021
         .details h2 {
             /* margin-bottom: 300px; */
             position: relative;
-            top: 100px;
+            top: 50px;
             margin: auto;
             color: rgb(18, 231, 231);
             font-size: 3rem;
@@ -90,59 +85,67 @@ Created on Sun may 14 16:37:22 2021
 
         .upload {
 
-            font-size: 20px;
+            font-size: 15px;
             background-color: rgb(255, 252, 252);
-            border-radius: 20px;
+            border-radius: 15px;
             outline: none;
-            width: 315px;
+            width: 700px;
             color: rgb(0, 0, 0);
             border: 3px solid rgb(45, 47, 49);
 
 
 
         }
+		.button1
+		{
+		background-color: white; 
+		  color: black; 
+		  border: 2px solid #4CAF50;
+		}
+
+		.button1:hover {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+
 
         ::-webkit-file-upload-button {
             color: white;
-            padding: 20px;
+            padding: 10px;
             border: 2px solid rgb(129, 129, 129);
-            background-color: rgb(129, 129, 129);
+            background-color: black;
             border-radius: 15px;
 
         }
 
-        ::-webkit-file-upload-button:hover {
-            border-radius: 20px;
-            border: 2px solid rgb(177, 174, 174);
-
-
-        }
 
 
 
         input[type="submit"] {
             position: absolute;
-            margin-top: 150px;
+            margin-top: 200px;
             padding: 15px 35px;
-            background-color: white;
+            background-color: black;
             border-radius: 15px;
-            color: black;
+            color: white;
             font-size: 1.5rem;
             border: 4px solid rgb(31, 185, 190);
         }
 
         .carousel-caption {
-            background: rgba(24, 25, 26, 0.5);
+            background: rgb(45, 47, 49);
             border-radius: 10px;
         }
-
+		div {
+    text-align:right;
+}
 
 
         .carousel-caption h3 {
 
 
             font-family: 'Rowdies', cursive;
-            color: yellow;
+            color: AliceBlue;
             text-transform: uppercase;
             margin-bottom: 10px;
 
@@ -168,21 +171,45 @@ Created on Sun may 14 16:37:22 2021
         }
 
 
-        @media only screen and (max-width: 325px) {
+        @media only screen and (max-width: 100px) {
             body {
                 font-size: x-small;
             }
         }
+		.container {
+  position: relative;
+  width: 50%;
+}
+
+
     </style>
 
 
 </head>
 
 <body>
-
+	
 
     <header>
+	<div id="google_translate_element"></div>
+	
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'},
+				'google_translate_element'
+			);
+		}
+	</script>
+	
+	<script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+	</script>
+	
+	
         <div class="container-fluid">
+		<h1 class="text-center mt-2 ">Predict Cotton Crop Disease & Get Cure</h1>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -213,16 +240,7 @@ Created on Sun may 14 16:37:22 2021
                     <div class="carousel-item">
                         <img src="/static/images/image22.jpg" class="d-block w-100" alt="...">
                         <div class="container">
-                            <div class="carousel-caption">
-                                <h3>कपास पेड़ का रोग का अंदाज और उपाय 
-                                </h3>
-                                <p>
-                                    कई दिग्गजों ने कहा कि Deep Learning and AI यह हमारी दुनिया के लिए खतरा है लेकिन अगर
-                                    हम इसका सही यूज़ करें तो हम कई अच्छे काम भी कर सकते हैं आज इसी का छोटा सा example
-                                    देखेंगे जिसमें हम कपास की खेती में होने वाले
-                                    रोग के बारे मे पता करेगें</p>
-
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -231,19 +249,11 @@ Created on Sun may 14 16:37:22 2021
                         <img src="/static/images/image11.jpg" class="d-block w-100" alt="...">
                         <div class="container">
                             <div class="container ">
-                                <div class="carousel-caption">
-                                    <h3>
-                                        कपाशीच्या झाडाच्या रोगाचा अंदाज आणि उपाय </h3>
-                                    <p>गेल्या काही वर्षांपासून
-								 सखोल अभ्यास (Deep Learning) आणि कृत्रिम बुद्धिमत्ता (Artificial Intelligence) हा सर्वात चर्चेचा विषय राहिला आहे, 
-								बरेच दिग्गज लोक म्हणतात की हा आपल्या जगासाठी धोका आहे, परंतु जर आपण त्याचा योग्य वापर केला तर आपण आज बर्‍याच चांगल्या गोष्टी करू शकतो. 
-								त्याचेच एक उदाहरण हे  की  आपण कापसाचे रोग जाणून त्यावर त्यावर उपाय काढतो.
-                                    </p>
-
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
+				
                 </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -264,12 +274,12 @@ Created on Sun may 14 16:37:22 2021
     <section>
 
         <div class="container-fluid details">
-            <h1 class="text-center mt-5 ">Predict Cotton Crop Disease & Get Cure</h1>
+            
 
-            <h2 class="text-center mt-4 mb-4" style="font-size: 2rem;">कपास के पेड कि तस्वीर डालिये</h2>
+            <h2 class="text-center mt-4 mb-4" style="font-size: 2rem;">ADD photo of Cotton Leaf</h2>
             <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
 
-                <input type="file" name="image" class="upload">
+                <input type="file" name="image" class="upload button1">
                 <input type="submit" value="Predict">
 
             </form>
@@ -288,9 +298,19 @@ Created on Sun may 14 16:37:22 2021
    
 
 
-    <section>
-        
+    <!--<section>
+        <h2>Slide in Overlay from the Right</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="/static/images/h.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Healthy Plant</div>
+  </div>
+</div>
+
     </section>
+	-->
 
 
 
