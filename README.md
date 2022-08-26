@@ -179,6 +179,9 @@ Step 10: : Start XAMPP server and Go to the browser and paste the url http://127
 ![Capture](https://user-images.githubusercontent.com/54286037/128539603-4c9ce8ac-5bc5-4233-8226-2f4412d6c0b0.PNG)
 ![Capture1](https://user-images.githubusercontent.com/54286037/128539641-46338ecb-785e-4b29-a0d9-dcf996d99b1d.PNG)
 
+![image](https://user-images.githubusercontent.com/59277684/186890194-54216e53-6151-4d45-aec0-b7511d4f861a.png)
+
+
 
 
 
