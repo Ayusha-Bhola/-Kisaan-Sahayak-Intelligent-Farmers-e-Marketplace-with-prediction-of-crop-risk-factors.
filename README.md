@@ -197,5 +197,3 @@ Step 10: : Start XAMPP server and Go to the browser and paste the url http://127
 
 
 
-
-
